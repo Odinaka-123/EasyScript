@@ -1,0 +1,11 @@
+{
+  "name": "easyscript",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx ts-node src/cli.ts examples/hello.easy"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
