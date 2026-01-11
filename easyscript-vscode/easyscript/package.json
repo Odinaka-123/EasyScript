@@ -1,0 +1,50 @@
+{
+  "name": "easyscript",
+  "displayName": "EasyScript",
+  "description": "Language support for EasyScript, a readable scripting language that compiles to JavaScript.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "easyscript",
+        "aliases": [
+          "EasyScript"
+        ],
+        "extensions": [
+          ".easy"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "easyscript",
+        "scopeName": "source.easyscript",
+        "path": "./syntaxes/easyscript.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "EasyScript Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/easyscript-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.6",
+    "@types/vscode": "^1.108.1",
+    "typescript": "^5.2.2"
+  }
+}
